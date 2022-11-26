@@ -53,3 +53,19 @@ pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
     p.second=lastpos(arr,n,k);
     return p;
 }
+// Total Occurences of an element 
+int countOccurences(int arr[], int n, int X)
+{
+	//Write your code here
+    int ans;
+    int first=firstpos(arr,n,X);
+    int last=lastpos(arr,n,X);
+   if(first==-1)
+   {
+       return 0;
+   }
+    else
+    {
+        return (last-first+1);
+    }
+}
